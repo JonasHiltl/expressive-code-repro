@@ -1,0 +1,25 @@
+{
+  "name": "oclanding",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "wrangler pages dev ./dist --compatibility-flags=\"nodejs_compat\"",
+    "deploy": "wrangler login && npm run build && npx wrangler pages deploy dist --project-name oclanding",
+    "astro": "astro",
+    "wrangler": "wrangler"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.1",
+    "@astrojs/cloudflare": "^11.0.4",
+    "@astrojs/starlight": "^0.28.2",
+    "astro": "^4.13.1"
+  },
+  "devDependencies": {
+    "shiki": "^1.22.0",
+    "typescript": "^5.5.4",
+    "wrangler": "^3.70.0"
+  }
+}
